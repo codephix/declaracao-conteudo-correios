@@ -1,5 +1,5 @@
 {
-  "name": "fontebasso/declaracao-conteudo-correios",
+  "name": "codephix/declaracao-conteudo-correios",
   "description": "Gerador de Declara\u00E7\u00E3o de Conte\u00FAdo para postagem nos Correios",
   "keywords": [
     "declaração de conteúdo",
@@ -18,7 +18,7 @@
     }
   },
   "require": {
-    "php": "^7.3"
+    "php": ">=7.2"
   },
   "license": "MIT",
   "require-dev": {
