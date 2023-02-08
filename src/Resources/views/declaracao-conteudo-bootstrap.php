@@ -1,4 +1,54 @@
-<?php // phpcs:ignoreFile -- this is not a core file ?>
+<?php 
+
+if(!function_exists('trataMesfull')){
+
+    function trataMesfull($mes){
+        switch($mes){
+            case "01":
+                $mes="Janeiro";
+                break;
+            case "02":
+                $mes="Fevereiro";
+                break;
+            case "03":
+                $mes="Março";
+                break;
+            case "04":
+                $mes="Abril";
+                break;
+            case "05":
+                $mes="Maio";
+                break;
+            case "06":
+                $mes="Junho";
+                break;
+            case "07":
+                $mes="Julho";
+                break;
+            case "08":
+                $mes="Agosto";
+                break;
+            case "09":
+                $mes="Setembro";
+                break;
+            case "10":
+                $mes="Outubro";
+                break;
+            case "11":
+                $mes="Novembro";
+                break;
+            case "12":
+                $mes="Dezembro";
+                break;
+        }
+        return $mes;
+    }
+
+}
+
+
+
+?><?php // phpcs:ignoreFile -- this is not a core file ?>
 <!doctype html>
 <html lang="pt-br">
     <head>
@@ -112,13 +162,13 @@
                                                 <p class="m-0 text-center" style="border-bottom: 1px solid #000;float:left;width:95%"><?php echo $remetente->getCidade(); ?></p>,
                                             </div>
                                             <div class="col-1 p-0">
-                                                <p class="m-0 text-center" style="border-bottom: 1px solid #000;float:left;width:65%"><?php echo strftime('%d'); ?></p> de
+                                                <p class="m-0 text-center" style="border-bottom: 1px solid #000;float:left;width:65%"><?php echo date('d'); ?></p> de
                                             </div>
                                             <div class="col-2 p-0">
-                                                <p class="m-0 text-center" style="border-bottom: 1px solid #000;float:left;width:75%;"><?php echo strftime('%B'); ?></p> de
+                                                <p class="m-0 text-center" style="border-bottom: 1px solid #000;float:left;width:75%;"><?php echo trataMesfull(date('m')); ?></p> de
                                             </div>
                                             <div class="col-1 p-0">
-                                                <p class="m-0 text-center" style="border-bottom: 1px solid #000;"><?php echo strftime('%Y'); ?></p>
+                                                <p class="m-0 text-center" style="border-bottom: 1px solid #000;"><?php echo date('Y'); ?></p>
                                             </div>
                                             <div class="col-5">
                                                 <p class="m-0" style="border-bottom: 1px solid #000;">&nbsp;</p>
@@ -171,8 +221,5 @@
                 }
             }
         </style>
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
     </body>
 </html>
